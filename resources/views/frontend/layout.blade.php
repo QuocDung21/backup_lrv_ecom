@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>VINANEON - {{$data_seo->meta_title}}</title>
+    <title>APPLE-123 - {{$data_seo->meta_title}}</title>
     <!---seo------->
     <meta name="description" content="{{$data_seo->meta_description}}">
     <meta name="keywords" content="{{$data_seo->meta_keyword}}">
@@ -24,7 +24,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="../libs/vinaneon-logo-1.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+
 
     <base href="/">
     <!-- All css files are included here. -->
@@ -60,7 +60,7 @@
         <!-- Start Offset Wrapper -->
         @include('frontend.offset')
         <!-- End Offset Wrapper -->
-        
+
         @yield('content')
 
         <!-- Start Footer Area -->
@@ -76,7 +76,7 @@
                                 <div class="ft__details">
                                     <div class="row">
                                         <div class="col-sm-9">
-                                            <p>VINANEON luôn luôn mong muốn đem đến cho quý khách hàng những sản phẩm uy tín, chất lượng, giá cả tốt nhất thị trường</p>
+                                            <p>APPLE-123 luôn luôn mong muốn đem đến cho quý khách hàng những sản phẩm uy tín, chất lượng, giá cả tốt nhất thị trường</p>
                                         </div>
                                     </div>
                                     <div class="ft__social__link">
@@ -209,7 +209,7 @@
                         $('.ajax-search').html(data);
 
                         $('.choose').click(function () {
-                            
+
                             $('#keyword').val($(this).text())
                             $('.ajax-search').fadeOut();
                         })
@@ -218,7 +218,7 @@
             }
         })
 
-       
+
 
         $('.cart__menu').click(function(){
             var output = '';
@@ -256,16 +256,16 @@
                     }else{
                         output = data[0]
                     }
-                    
+
 
                     $('.total__price').text(data[1].toLocaleString('ja-JP')+ ''+ ' VNĐ');
                     $('.shp__cart__wrap').html(output);
-                    
+
                     //Handle delete product in cart offset
                     $('.button_del').click(function () {
                         var id = $(this).data('id-delete-cart');
                         var _token = $('input[name=_token]').val();
-                        
+
                         $.ajax({
                             url: 'delete_cart_offset',
                             method: 'POST',

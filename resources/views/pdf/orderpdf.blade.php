@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base href="/">
     <!-- Bootstrap CSS -->
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
          /* @font-face {
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">VINANEON</h3>
+                <h3 class="text-center">APPLE-123</h3>
                 <p class="text-center">Đơn hàng ngày {{date('d/m/Y',strtotime($dataOrder->created_at))}}</p>
             </div>
         </div>
@@ -37,7 +37,7 @@
                                         <br>
                 Trạng thái: {!!\App\Helpers\OrderStatusHelper::Status($dataOrder->order_status)!!}
             </div>
-            
+
         </div>
         <br>
         <hr>

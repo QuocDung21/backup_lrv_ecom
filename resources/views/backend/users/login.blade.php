@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    VINANEON
+      APPLE-123
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -21,14 +21,14 @@
 </head>
 
 <body class="">
- 
+
     <div class="content">
 
       @include('backend.note')
 
         <form action="admin" method="POST" autocomplete="on">
             @csrf
-            
+
           <div class="row  mt-5">
             <div class="col-md-6 offset-md-3">
               <div class="card">
@@ -56,10 +56,10 @@
                 <div class="clearfix"></div>
             </div>
           </form>
-    
+
         </div>
     </div>
-  
+
   <!--   Core JS Files   -->
   <script src="../backend_assets/assets/js/core/jquery.min.js"></script>
   <script src="../backend_assets/assets/js/core/popper.min.js"></script>

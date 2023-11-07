@@ -27,7 +27,7 @@ class PageController extends Controller
         $priceMin = ProductModel::min('product_price_sell');
         $dataCategory = CategoryModel::all();
         $dataBrand = BrandModel::all();
-        $this->data_seo = new SeoHelper('Kính chào quý khách', 'Bàn decor, gương decor, thảm decor, ghể decor, tranh decor', 'VINANEON - Chuyên cung cấp những vật phẩm decor uy tín, chất lượng, giá rẻ', 'http://127.0.0.1:8000/');
+        $this->data_seo = new SeoHelper('Kính chào quý khách', 'Iphone', 'APPLE-123 - Chuyên cung cấp những vật phẩm decor uy tín, chất lượng, giá rẻ', 'http://127.0.0.1:8000/');
         view()->share([
             'dataCategory' => $dataCategory,
             'dataBrand' => $dataBrand,

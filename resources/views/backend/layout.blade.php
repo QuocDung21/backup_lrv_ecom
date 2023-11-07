@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    VINANEON
+    APPLE-123
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -33,11 +33,11 @@
       <div class="content">
 
         @yield('content')
-        
+
       </div>
     </div>
   </div>
-  
+
   <!--   Core JS Files   -->
   <script src="../backend_assets/assets/js/core/jquery.min.js"></script>
   <script src="../backend_assets/assets/js/core/popper.min.js"></script>
@@ -81,7 +81,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
-  
+
   @include('sweetalert::alert')
   @yield('script')
 
