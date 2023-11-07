@@ -21,8 +21,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
-                                <div class="slide__thumb">
-                                    <img src="{{$slide->image}}" alt="slider images APPLE-123">
+                                <div  class="slide__thumb">
+                                    <img style="object-fit: cover" src="{{$slide->image}}" alt="slider images APPLE-123">
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                         <div class="col-lg-6 col-md-6 single__tes">
                             <div class="testimonial">
                                 <div class="testimonial__thumb">
-                                    <img style="width:90px" src="{{$item->product->product_image}}"
+                                    <img style="width:90px;object-fit: cover" src="{{$item->product->product_image}}"
                                          alt="{{$item->product->product_name}}">
                                 </div>
                                 <div class="testimonial__details">
@@ -142,8 +142,8 @@
                                 <div class="category">
                                     <div class="ht__cat__thumb">
                                         <span class="sale-span">-{{$item->product->product_sale}}%</span>
-                                        <a href="/shop/product/{{$item->product->product_id}}">
-                                            <img style="max-width: 260px; height: 260px;"
+                                        <a href="/shop/product/{{$item->product->product_id}}-{{Str::slug($item->product->product_name)}}">
+                                            <img style="max-width: 260px; height: 260px;object-fit: cover"
                                                  src="{{$item->product->product_image}}"
                                                  alt="{{$item->product->product_name}}">
                                         </a>
@@ -186,6 +186,9 @@
                                         <h4>
                                             <a href="/shop/product/{{$item->product->product_id}}-{{Str::slug($item->product->product_name, '-')}}.html"></a>
                                         </h4>
+                                        <h4>
+                                            {{$item->product->product_name}}
+                                        </h4>
                                         <ul class="fr__pro__prize">
                                             <li class="old__prize">{{number_format($item->product->product_price_sell)}}
                                                 VNĐ
@@ -223,7 +226,8 @@
                                 <div class="ht__cat__thumb">
                                     <span class="sale-span">New</span>
                                     <a href="/blog/{{$item->id}}-{{Str::slug($item->post_title, '-')}}.html">
-                                        <img style="max-width: 260px; height: 260px" src="{{$item->post_image}}"
+                                        <img style="max-width: 260px; height: 260px;object-fit: cover"
+                                             src="{{$item->post_image}}"
                                              alt="{{$item->post_title}}">
                                     </a>
                                 </div>
