@@ -10,11 +10,12 @@ use App\Models\BrandModel;
 class BrandController extends Controller
 {
 
-    public function __construct(){
+    public function __construct()
+    {
         $active = "active";
         view()->share('activeBrand', $active);
     }
-    
+
     //Danh sách không gian decor
     public function index()
     {
@@ -33,15 +34,14 @@ class BrandController extends Controller
     public function store(BrandRequest $request)
     {
         $data = new BrandModel();
-        
+
         $data->brand_name = $request->brand_name;
         $data->brand_keyword = $request->brand_keyword;
         $data->brand_description = $request->brand_description;
 
-        if($data->save()){
+        if ($data->save()) {
             return redirect('admin/brands/create')->with('msgSuccess', 'Thêm không gian decor Thành Công');
-        }
-        else{
+        } else {
             return redirect('admin/brands/create')->with('msgSuccess', 'Thêm không gian decor Thất Bại');
         }
     }
@@ -59,15 +59,13 @@ class BrandController extends Controller
     public function update(BrandRequest $request, $id)
     {
         $data = BrandModel::find($id);
-
         $data->brand_name = $request->brand_name;
         $data->brand_keyword = $request->brand_keyword;
         $data->brand_description = $request->brand_description;
 
-        if($data->save()){
+        if ($data->save()) {
             return redirect()->back()->with('msgSuccess', 'Cập Nhật không gian decor Sản Phẩm Thành Công');
-        }
-        else{
+        } else {
             return redirect()->back()->with('msgSuccess', 'Cập Nhật không gian decor Sản Phẩm Thất Bại');
         }
     }
@@ -77,11 +75,12 @@ class BrandController extends Controller
     {
         $data = BrandModel::find($id);
 
-        if($data->delete()){
-            return response()->json(['msgSuccess'=>'Xóa không gian decor thành công']);
-        }
-        else{
-            return response()->json(['msgError'=>'Xóa không gian decor thất bại']);
+        if ($data->delete()) {
+            return response()->json(['msgSuccess' => 'Xóa không gian decor thành công']);
+
+
+        } else {
+            return response()->json(['msgError' => 'Xóa không gian decor thất bại']);
         }
     }
 }
