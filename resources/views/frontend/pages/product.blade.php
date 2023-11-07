@@ -14,7 +14,7 @@
                                 <div class="portfolio-full-image tab-content">
                                     <div role="tabpanel" class="tab-pane fade in active" id="img-tab-0">
                                         <img style="width: 460px; height: 460px;object-fit: cover"
-                                             src="{{$data->product_image}}"
+                                             src="{{asset($data->product_image)}}"
                                              alt="full-image">
                                     </div>
                                     @foreach ($dataProductImages as $item)

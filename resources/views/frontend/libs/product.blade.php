@@ -7,7 +7,8 @@
             <span class="sale-span">Hết Hàng</span>
         @endif
         <a href="/shop/product/{{$item->product_id}}-{{Str::slug($item->product_name, '-')}}.html">
-            <img style="max-width: 260px; height: 260px;object-fit: cover" src="{{$item->product_image}}" alt="{{$item->product_name}}">
+            <img style="max-width: 260px; height: 260px;object-fit: cover" src="{{asset($item->product_image)}}"
+                 alt="{{$item->product_name}}">
         </a>
     </div>
     <div class="fr__hover__info">

@@ -29,24 +29,25 @@
     <base href="/">
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
-    <link rel="stylesheet" href="../frontend_assets/css/bootstrap.min.css">
+{{--    <link rel="stylesheet" href="../frontend_assets/css/bootstrap.min.css">--}}
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/bootstrap.min.css")}}">
     <!-- Owl Carousel min css -->
-    <link rel="stylesheet" href="../frontend_assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../frontend_assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/owl.carousel.min.css")}}">
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/owl.theme.default.min.css")}}">
     <!-- This core.css file contents all plugings css file. -->
-    <link rel="stylesheet" href="../frontend_assets/css/core.css">
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/core.css")}}">
     <!-- Theme shortcodes/elements style -->
-    <link rel="stylesheet" href="../frontend_assets/css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/shortcode/shortcodes.css")}}">
     <!-- Theme main style -->
-    <link rel="stylesheet" href="../frontend_assets/style.css">
+    <link rel="stylesheet" href="{{asset("frontend_assets/style.css")}}">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="../frontend_assets/css/responsive.css">
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/responsive.css")}}">
     <!-- User style -->
-    <link rel="stylesheet" href="../frontend_assets/css/custom.css">
+    <link rel="stylesheet" href="{{asset("frontend_assets/css/custom.css")}}">
 
     @yield('style')
     <!-- Modernizr JS -->
-    <script src="../frontend_assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="{{asset("frontend_assets/js/vendor/modernizr-3.5.0.min.js")}}"></script>
 </head>
 
 <body>
@@ -177,18 +178,18 @@
     <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- jquery latest version -->
-    <script src="../frontend_assets/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="{{asset("frontend_assets/js/vendor/jquery-3.2.1.min.js")}}"></script>
     <!-- Bootstrap framework js -->
-    <script src="../frontend_assets/js/bootstrap.min.js"></script>
+    <script src="{{asset("frontend_assets/js/bootstrap.min.js")}}"></script>
     <!-- All js plugins included in this file. -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../frontend_assets/js/plugins.js"></script>
-    <script src="../frontend_assets/js/slick.min.js"></script>
-    <script src="../frontend_assets/js/owl.carousel.min.js"></script>
+    <script src="{{asset("frontend_assets/js/plugins.js")}}"></script>
+    <script src="{{asset("frontend_assets/js/slick.min.js")}}"></script>
+    <script src="{{asset("frontend_assets/js/owl.carousel.min.js")}}"></script>
     <!-- Waypoints.min.js. -->
-    <script src="../frontend_assets/js/waypoints.min.js"></script>
+    <script src="{{asset("frontend_assets/js/waypoints.min.js")}}"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="../frontend_assets/js/main.js"></script>
+    <script src="{{asset("frontend_assets/js/main.js")}}"></script>
     @include('sweetalert::alert')
     @yield('script')
     <script>

@@ -22,7 +22,7 @@
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                 <div  class="slide__thumb">
-                                    <img style="object-fit: cover" src="{{$slide->image}}" alt="slider images APPLE-123">
+                                    <img style="object-fit: cover" src="{{asset($slide->image)}}" alt="slider images APPLE-123">
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
         <section class="ftr__product__area ptb--50">
             <div class="container-fluid">
                 <center>
-                    <a href="{{$dataBanner->target}}"><img style="max-width: 100%" src="{{$dataBanner->image}}"
+                    <a href="{{$dataBanner->target}}"><img style="max-width: 100%" src="{{asset($dataBanner->image)}}"
                                                            alt="{{$dataBanner->title}}"></a>
                 </center>
             </div>
@@ -105,7 +105,7 @@
                         <div class="col-lg-6 col-md-6 single__tes">
                             <div class="testimonial">
                                 <div class="testimonial__thumb">
-                                    <img style="width:90px;object-fit: cover" src="{{$item->product->product_image}}"
+                                    <img style="width:90px;object-fit: cover" src="{{asset($item->product->product_image)}}"
                                          alt="{{$item->product->product_name}}">
                                 </div>
                                 <div class="testimonial__details">
@@ -144,7 +144,7 @@
                                         <span class="sale-span">-{{$item->product->product_sale}}%</span>
                                         <a href="/shop/product/{{$item->product->product_id}}-{{Str::slug($item->product->product_name)}}">
                                             <img style="max-width: 260px; height: 260px;object-fit: cover"
-                                                 src="{{$item->product->product_image}}"
+                                                 src="{{asset($item->product->product_image)}}"
                                                  alt="{{$item->product->product_name}}">
                                         </a>
                                     </div>
@@ -227,7 +227,7 @@
                                     <span class="sale-span">New</span>
                                     <a href="/blog/{{$item->id}}-{{Str::slug($item->post_title, '-')}}.html">
                                         <img style="max-width: 260px; height: 260px;object-fit: cover"
-                                             src="{{$item->post_image}}"
+                                             src="{{asset($item->post_image)}}"
                                              alt="{{$item->post_title}}">
                                     </a>
                                 </div>
