@@ -84,7 +84,7 @@
                                 <li>Giảm {{$data->product_sale}}%</li> <br>
                             </ul>
                             <ul  class="pro__prize">
-                                
+
                                 <li class="old__prize">{{number_format($data->product_price_sell)}} VNĐ</li>
                                 <li>{{number_format($product_price_sale = $data->product_price_sell - ($data->product_price_sell/100 * $data->product_sale))}} VNĐ</li>
                             </ul>
@@ -95,7 +95,7 @@
                                 @else
                                 <li class="text-danger">Sản phẩm này đã hết hàng</li> <br>
                                 @endif
-                                
+
                             </ul>
                             <p class="pro__info"></p>
                             <div class="ht__pro__desc">
@@ -131,7 +131,7 @@
                                     </ul>
                                 </div>
                                 <div class="sin__desc align--left">
-                                    <p><span>Không gian decor:</span></p>
+                                    <p><span>Thương hiệu:</span></p>
                                     <ul class="pro__cat__list">
                                         <li><a href="/shop/brand/{{$data->brand_id}}">{{$data->brand->brand_name}}</a></li>
                                     </ul>
@@ -195,28 +195,28 @@
                                                     {{'CHưa có đánh giá nào'}}
                                                 @else
                                                     {{$rating}}
-                                                @endif    
+                                                @endif
                                             </span></h2>
                                         </div>
                                         @if ($checkCmt)
                                         <div class="stars">
-                                            <form> 
+                                            <form>
                                                 @csrf
-                                                <input class="star star-5" id="star-5" type="radio" name="star" value="5"/> <label class="star star-5" for="star-5"></label> 
-                                                <input class="star star-4" id="star-4" type="radio" name="star" value="4"/> <label class="star star-4" for="star-4"></label> 
-                                                <input class="star star-3" id="star-3" type="radio" name="star" value="3"/> <label class="star star-3" for="star-3"></label> 
-                                                <input class="star star-2" id="star-2" type="radio" name="star" value="2"/> <label class="star star-2" for="star-2"></label> 
-                                                <input class="star star-1" id="star-1" type="radio" name="star" value="1"/> <label class="star star-1" for="star-1"></label> 
+                                                <input class="star star-5" id="star-5" type="radio" name="star" value="5"/> <label class="star star-5" for="star-5"></label>
+                                                <input class="star star-4" id="star-4" type="radio" name="star" value="4"/> <label class="star star-4" for="star-4"></label>
+                                                <input class="star star-3" id="star-3" type="radio" name="star" value="3"/> <label class="star star-3" for="star-3"></label>
+                                                <input class="star star-2" id="star-2" type="radio" name="star" value="2"/> <label class="star star-2" for="star-2"></label>
+                                                <input class="star star-1" id="star-1" type="radio" name="star" value="1"/> <label class="star star-1" for="star-1"></label>
                                                 <textarea style="background: #fff; min-width: 260px; border: none" name="comment_customer" cols="30" rows="5" placeholder="Viết bình luận của bạn ở đây"></textarea>
                                                 <ul class="payment__btn mt-0">
                                                     <li><button type="button" class="btn form-control btn-comment" data-product_id="{{$data->product_id}}">Gửi bình luận</button></li>
                                                 </ul>
                                             </form>
                                         </div>
-                                        @else 
+                                        @else
                                         <span class="text-danger">Bạn cần đăng nhập và mua sản phẩm để bình luận</span>
                                         @endif
-                                        
+
                                     </div>
                                     <div class="col-md-8">
                                         <div class="ht__product__dtl">
@@ -226,25 +226,25 @@
                                         <div class="comment-list">
                                             <div class="comment-add"></div>
                                             @foreach ($dataComment as $item)
-                                            <div class="single-comment">    
-                                                <p><span class="text-danger">{{date('d/m/Y',strtotime($item->created_at))}} {{$item->user->user_name}} 
+                                            <div class="single-comment">
+                                                <p><span class="text-danger">{{date('d/m/Y',strtotime($item->created_at))}} {{$item->user->user_name}}
                                                     @php
                                                         $rating = '';
-                                                        for ($i=0; $i < $item->comment_rating; $i++) { 
-                                                            $rating = $rating . '<i style="color: red" class="icon-star icons"></i>';  
+                                                        for ($i=0; $i < $item->comment_rating; $i++) {
+                                                            $rating = $rating . '<i style="color: red" class="icon-star icons"></i>';
                                                         };
                                                     @endphp
                                                         {!! $rating !!}
                                                     </span>
                                                     : {{$item->comment_customer}}
-                                                </p> 
+                                                </p>
                                                 @if ($item->comment_admin != '')
-                                                <p><span class="text-danger">--Trả lời từ Admin:</span> {{$item->comment_admin}}</p>    
+                                                <p><span class="text-danger">--Trả lời từ Admin:</span> {{$item->comment_admin}}</p>
                                                 @endif
                                             </div>
                                             <hr>
                                             @endforeach
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -262,7 +262,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    
+
                     <div class="section__title--2 text-center">
                         @if (count($dataProductCategory) > 0)
                         <h2 class="title__line">SẢN PHẨM LIÊN QUAN</h2>
@@ -280,7 +280,7 @@
                     </div>
                     <!-- End Single Product -->
                     @endforeach
-                    
+
                 </div>
             </div>
         </div>
@@ -369,12 +369,12 @@
                     else{
                         star = ''
                     }
-                    
-                    html = `<div class="single-comment-${data[0]}">    
+
+                    html = `<div class="single-comment-${data[0]}">
                                 <p>
                                     <span class="text-danger">${data[4]} ${data[1]} ${star}</span>
                                     : ${data[2]}
-                                </p> 
+                                </p>
                             </div>
                             <hr>`;
                     $('.comment-add').after(html)
@@ -391,7 +391,7 @@
         $('.handle_wishlist').click(function(){
             var product_id = $(this).data('product_id');
             var _token = $('input[name=_token]').val();
-            
+
             $.ajax({
                 url: 'handle-wishlist',
                 method: 'POST',

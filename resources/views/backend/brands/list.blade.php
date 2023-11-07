@@ -4,12 +4,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <a href="admin/brands/create" class="btn btn-primary" data-color="green">Thêm Không Gian Decor</a>
+            <a href="admin/brands/create" class="btn btn-primary" data-color="green">Thêm thương hiệu</a>
         </div>
         <div class="col-md-12">
             <div class="card">
             <div class="card-header card-header-primary">
-                <h4 class="card-title ">Không Gian Decor</h4>
+                <h4 class="card-title ">Thương hiệu</h4>
             </div>
 
             @include('backend.note')
@@ -69,13 +69,13 @@
   <script>
 
       $('.button-delete').click(function (e) {
-          
+
         e.preventDefault();
         var brand_id = $(this).closest('tr').find('.id_delete').val();
         var token = $('input[name=_token]').val();
 
         swal({
-            title: "Bạn có chắc sẽ xóa không gian decor này",
+            title: "Bạn có chắc sẽ xóa thương hiệu này",
             icon: "warning",
             buttons: true,
             dangerMode: true,

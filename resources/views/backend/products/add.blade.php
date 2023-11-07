@@ -96,7 +96,7 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label class="bmd-label-floating">Không gian decor</label>
+                      <label class="bmd-label-floating">Thương hiệu</label>
                       <select name="brand_id" class="form-control">
                         <option value="">---Chọn Không Gian---</option>
                         @foreach ($dataBrand as $item)
@@ -122,7 +122,7 @@
                 @error('product_image')
                   <span class="text-danger">{{$message}}</span>
                 @enderror
-                <br>    
+                <br>
                 <img src="../libs/image_no.png" id="image" style="width:200px" alt="Ảnh sản phẩm">
               </div>
             </div>
@@ -141,7 +141,7 @@
                 <div class="col-md-12">
                   <div class="row" id="list_image">
                     <div class="col-md-12"  id="list_image">
-    
+
                     </div>
                   </div>
                 </div>
@@ -194,17 +194,17 @@
 
     function chosseFiles(file){
       var place = $('#list_image');
-      
+
       if(file && file.files.length < 4){
         var count = file.files.length;
         $('#list_image img').remove();
 
         for(var i = 0; i < count; i++){
-          
+
           var reader = new FileReader();
           reader.onload = function(event) {
             $($.parseHTML('<img style="width: 100px;" class="col-md-4 mb-3">')).attr('src', event.target.result).appendTo(place);
-            
+
           }
 
           reader.readAsDataURL(file.files[i]);
@@ -216,6 +216,6 @@
         }).then(() => $('#product_list_image').val(''))
       }
     }
-    
+
   </script>
 @endsection
