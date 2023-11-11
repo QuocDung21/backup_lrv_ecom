@@ -15,7 +15,7 @@
                                     <div class="slider__inner">
                                         <h1>{{$slide->slide_title}}</h1>
                                         <div class="cr__btn">
-                                            <a href="{{$slide->target}}">View Now</a>
+                                            <a href="{{$slide->target}}">Xem ngay</a>
                                         </div>
                                     </div>
                                 </div>

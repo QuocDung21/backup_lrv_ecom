@@ -22,7 +22,11 @@ use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\frontend\CustomerController;
 use App\Http\Controllers\backend\RequirementController;
-use RealRashid\SweetAlert\Facades\Alert;//dùng sweet alert
+use RealRashid\SweetAlert\Facades\Alert;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
+//dùng sweet alert
 
 
 /*
@@ -71,10 +75,13 @@ Route::post('/contact/send', [\App\Http\Controllers\frontend\RequirementControll
 Route::get('/blog', [PageController::class, 'blog']);
 Route::get('/blog/{id}', [PageController::class, 'viewBlog']);
 
+
+
 //Route Customer
 Route::get('/customer', [CustomerController::class, 'index']);
 Route::post('/customer/login', [CustomerController::class, 'customerLogin']);
 Route::post('/customer/register', [CustomerController::class, 'customerRegister']);
+
 Route::prefix('customer')->middleware('HandleLoginCustomer')->group(function () {
     Route::get('/profile', [CustomerController::class, 'customerProfile']);
     Route::get('/shipaddres', [CustomerController::class, 'customerShipAddres']);
@@ -95,7 +102,6 @@ Route::post('/get-data-search', [CustomerController::class, 'getDataSearch']);
 //Route đăng nhập phía quản trị
 Route::get('/admin', [UserController::class, 'getLogin']);
 Route::post('/admin', [UserController::class, 'postLogin']);
-
 
 
 //Route prefix admin, middleware login admin
