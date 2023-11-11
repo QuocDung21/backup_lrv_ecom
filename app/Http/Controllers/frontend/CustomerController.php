@@ -59,13 +59,48 @@ class CustomerController extends Controller
         }
     }
 
+//    public function customerRegister(Request $request)
+//    {
+//        $data = new UserModel();
+//        $request->validate([
+//            'user_name' => 'required|min:5|max:50',
+//            'user_email' => 'required|email:rfc,dns|max:30|unique:users,user_email',
+//            'user_password' => 'required|min:5|max:20',
+//            'user_password_again' => 'required|same:user_password',
+//        ], [
+//            'user_name.required' => 'Họ tên không được để trống',
+//            'user_email.required' => 'Email không được để trống',
+//            'user_password.required' => 'Mật khẩu không được để trống',
+//            'user_password_again.required' => 'Mật khẩu xác nhận không được để trống',
+//            'user_name.min' => 'Họ tên quá ngắn phải lớn hơn 5 kí tự',
+//            'user_name.max' => 'Họ tên quá dài phải nhỏ hơn 50 kí tự',
+//            'user_email.email' => 'Email không đúng định dạng',
+//            'user_email.unique' => 'Email đã được sử dụng',
+//            'user_email.max' => 'Email quá dài',
+//            'user_password.min' => 'Mật khẩu quá ngắn phải lớn hơn 5 kí tự',
+//            'user_password.max' => 'Mật khẩu quá dài phải nhỏ hơn 20 kí tự',
+//            'user_password_again.same' => 'Mật khẩu xác nhận không khớp',
+//        ]);
+//
+//        $data->user_name = $request->user_name;
+//        $data->user_email = $request->user_email;
+//        $data->password = bcrypt($request->user_password);
+//        $data->role_id = 3;
+//
+//        if ($data->save()) {
+//            return redirect('customer')->with('msgSuccess', 'Đăng kí thành công');
+//        } else {
+//            return redirect('customer')->with('msgError', 'Đăng kí thất bại');
+//        }
+//    }
+
     public function customerRegister(Request $request)
     {
         $data = new UserModel();
         $request->validate([
             'user_name' => 'required|min:5|max:50',
             'user_email' => 'required|email:rfc,dns|max:30|unique:users,user_email',
-            'user_password' => 'required|min:5|max:20',
+            'user_password' => 'required|min:8|max:20|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]+$/',
             'user_password_again' => 'required|same:user_password',
         ], [
             'user_name.required' => 'Họ tên không được để trống',
@@ -77,8 +112,9 @@ class CustomerController extends Controller
             'user_email.email' => 'Email không đúng định dạng',
             'user_email.unique' => 'Email đã được sử dụng',
             'user_email.max' => 'Email quá dài',
-            'user_password.min' => 'Mật khẩu quá ngắn phải lớn hơn 5 kí tự',
+            'user_password.min' => 'Mật khẩu quá ngắn phải lớn hơn 8 kí tự',
             'user_password.max' => 'Mật khẩu quá dài phải nhỏ hơn 20 kí tự',
+            'user_password.regex' => 'Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt',
             'user_password_again.same' => 'Mật khẩu xác nhận không khớp',
         ]);
 
@@ -95,7 +131,8 @@ class CustomerController extends Controller
     }
 
 
-    public function customerResetPassword () {
+    public function customerResetPassword()
+    {
 
     }
 
