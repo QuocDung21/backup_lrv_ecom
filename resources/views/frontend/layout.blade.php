@@ -22,10 +22,10 @@
         <meta property="og:image" content="../libs/vinaneon-logo.jpg"/>
     @endif
 
+
+
     <link rel="shortcut icon" type="image/x-icon" href="../libs/vinaneon-logo-1.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-
     <base href="/">
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
